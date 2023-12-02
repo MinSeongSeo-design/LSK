@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #search-container {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    #search-bar {
+      flex: 1;
+      padding: 8px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+    }
+
+    #search-btn {
+      background-color: #4285f4;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #search-btn:hover {
+      background-color: #3a73b7;
+    }
+  </style>
+  <title>Dynamic Search Bar</title>
+</head>
+<body>
+
+<div id="search-container">
+  <input type="text" id="search-bar" placeholder="회사명 또는 Ticker 검색">
+  <button id="search-btn">검색</button>
+</div>
+
+<script>
+  document.getElementById("search-btn").addEventListener("click", function() {
+    var searchTerm = document.getElementById("search-bar").value;
+    alert("검색어: " + searchTerm);
+    // 여기에서 실제 검색 결과를 처리하는 로직을 추가할 수 있습니다.
+  });
+</script>
+
+</body>
+</html>
